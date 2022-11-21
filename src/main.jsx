@@ -9,9 +9,10 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./index.css";
 import { setContext } from "@apollo/client/link/context";
+import { BrowserRouter } from "react-router-dom";
 
 const ACCESS_TOKEN = "KKp7X4O3zUWO-Ajm-PCzcyLRB1YiWnNt_5nyc4bmR9I";
-const SPACE_ID = "etnyvhabihji";
+const SPACE_ID = "uuu0i7f8baia";
 
 const httpLink = createHttpLink({
   uri: `https://graphql.contentful.com/content/v1/spaces/${SPACE_ID}/environments/master`,
@@ -36,7 +37,9 @@ const client = new ApolloClient({
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ApolloProvider client={client}>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </ApolloProvider>
   </React.StrictMode>
 );
