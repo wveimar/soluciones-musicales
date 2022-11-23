@@ -5,7 +5,11 @@ import "./nav-bar.css";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
-  const { error, data } = useQuery(MENU_NAVIGATIONS_QUERY, {});
+  const { error, data } = useQuery(MENU_NAVIGATIONS_QUERY, {
+    variables: {
+      order: "sort_ASC",
+    },
+  });
   if (error && error.networkError) {
     return <p>Error: {error.networkError.result.errors[0].message}</p>;
   }
@@ -14,11 +18,10 @@ export default function NavBar() {
   }
 
   const { items } = data.menuNavigationCollection;
-  console.log(items, "co");
+  // console.log(items, "co");
 
   return (
     <nav role="navigation" className="Navbar" aria-label="Main">
-   
       <ul className={`nav-items ${isOpen && "open"}`}>
         {items &&
           items.map((item, index) => (
@@ -43,10 +46,13 @@ export default function NavBar() {
 }
 
 const MENU_NAVIGATIONS_QUERY = gql`
-query menuNavigationCollectionQuery {
-    menuNavigationCollection {
+  query menuNavigationCollectionQuery($order: [MenuNavigationOrder]) {
+    menuNavigationCollection(order: $order) {
       items {
+        code
         name
+        menuPath
+        menuType
       }
     }
   }
