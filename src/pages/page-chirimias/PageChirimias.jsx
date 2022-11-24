@@ -3,8 +3,8 @@ import { useQuery, gql } from "@apollo/client";
 import PageSection from "../../components/page-section/PageSection";
 import Image from "../../components/image/Image";
 
-const PageMariachis = ({ pageCode }) => {
-  const { error, data } = useQuery(PAGE_CABILDO_CAPIUL_QUERY, {
+const PageChirimias = ({ pageCode }) => {
+  const { error, data } = useQuery(PAGE_CHIRIMIAS_QUERY, {
     variables: {
       where: { code_contains: pageCode },
     },
@@ -18,11 +18,12 @@ const PageMariachis = ({ pageCode }) => {
   }
 
   const [image] = data.simplePageCollection.items;
+  
 
-  console.log(pageCode);
+  console.log(data);
   return (
     <div style={{ margin: "40px" }}>
-      <Image description={image.description} url={image.image.url} />
+      {/* <Image description={image.description} url={image.image.url} /> */}
       <PageSection sectionCode="s1" code={pageCode}>
         contenido interno
       </PageSection>
@@ -33,9 +34,9 @@ const PageMariachis = ({ pageCode }) => {
   );
 };
 
-export default PageMariachis;
+export default PageChirimias;
 
-const PAGE_CABILDO_CAPIUL_QUERY = gql`
+const PAGE_CHIRIMIAS_QUERY = gql`
   query simplePageCollection($where: SimplePageFilter) {
     simplePageCollection(where: $where) {
       items {
