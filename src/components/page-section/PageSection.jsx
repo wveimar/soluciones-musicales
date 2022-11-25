@@ -16,8 +16,7 @@ const PageSection = ({ sectionCode, code, children }) => {
   }
 
   const [pageSection] = data.pageSectionCollection.items;
-  console.log(pageSection)
-  
+
   return (
     <section
       style={{ textAlign: "center", marginTop: "4rem" }}

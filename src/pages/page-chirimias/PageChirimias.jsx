@@ -20,10 +20,10 @@ const PageChirimias = ({ pageCode }) => {
   const [image] = data.simplePageCollection.items;
   
 
-  console.log(data);
+  console.log(image);
   return (
     <div style={{ margin: "40px" }}>
-      {/* <Image description={image.description} url={image.image.url} /> */}
+      <Image description={image.description} url={image.image.url} />
       <PageSection sectionCode="s1" code={pageCode}>
         contenido interno
       </PageSection>

@@ -1,8 +1,8 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Layout from "./components/common/Layout";
-import PageMariachis from "./pages/mariachis/PageMariachis";
 import PageChirimias from "./pages/page-chirimias/PageChirimias";
+import PageMariachis from "./pages/page-mariachis/PageMariachis";
 import { PAGE_CODES } from "./utils/page-codes";
 
 const App = () => {
