@@ -2,6 +2,7 @@ import React from "react";
 import { useQuery, gql } from "@apollo/client";
 import PageSection from "../../components/page-section/PageSection";
 import Image from "../../components/image/Image";
+import Gallery from "../../components/gallery/Gallery";
 
 const PageChirimias = ({ pageCode }) => {
   const { error, data } = useQuery(PAGE_CHIRIMIAS_QUERY, {
@@ -25,10 +26,10 @@ const PageChirimias = ({ pageCode }) => {
     <div style={{ margin: "40px" }}>
       <Image description={image.description} url={image.image.url} />
       <PageSection sectionCode="s1" code={pageCode}>
-        contenido interno
+      <Gallery code={`gallery-${pageCode}`} />
       </PageSection>
       <PageSection sectionCode="s2" code={pageCode}>
-        contenido interno 2
+      videos
       </PageSection>
     </div>
   );
