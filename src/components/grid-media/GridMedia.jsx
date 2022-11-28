@@ -6,7 +6,7 @@ import VideoMedia from "../video-media/VideoMedia";
 const GridMedia = ({ code }) => {
   const { error, data } = useQuery(GRID_MEDIA_QUERY, {
     variables: {
-      where: { code_contains: `${code}-s5-vg` },
+      where: { code_contains: `${code}`},
     },
   });
   if (error && error.networkError) {

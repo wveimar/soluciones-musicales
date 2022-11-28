@@ -2,6 +2,8 @@ import React from "react";
 import { useQuery, gql } from "@apollo/client";
 import PageSection from "../../components/page-section/PageSection";
 import Image from "../../components/image/Image";
+import Gallery from "../../components/gallery/Gallery";
+import GridMedia from "../../components/grid-media/GridMedia";
 
 const PageMariachis = ({ pageCode }) => {
   const { error, data } = useQuery(PAGE_CABILDO_CAPIUL_QUERY, {
@@ -24,10 +26,10 @@ const PageMariachis = ({ pageCode }) => {
     <div style={{ margin: "40px" }}>
       <Image description={image.description} url={image.image.url} />
       <PageSection sectionCode="s1" code={pageCode}>
-        contenido interno
+        <Gallery code={`gallery-${pageCode}`} />
       </PageSection>
       <PageSection sectionCode="s2" code={pageCode}>
-        contenido interno 2
+        <GridMedia code={`${pageCode}-s2-vg`} />
       </PageSection>
     </div>
   );

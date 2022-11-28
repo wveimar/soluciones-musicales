@@ -27,8 +27,8 @@ const PageChirimias = ({ pageCode }) => {
       <PageSection sectionCode="s1" code={pageCode}>
         <Gallery code={`gallery-${pageCode}`} />
       </PageSection>
-      <PageSection sectionCode="s3" code={pageCode}>
-        <GridMedia code={`${pageCode}`} />
+      <PageSection sectionCode="s2" code={pageCode}>
+        <GridMedia code={`${pageCode}-s2-vg`} />
       </PageSection>
     </div>
   );
