@@ -1,7 +1,7 @@
 import React from "react";
 import "./image.css";
 
-const Image = ({description, url}) => {
+const Image = ({ description, url }) => {
   return (
     <div className="image-container">
       <div className="container-text">
@@ -15,5 +15,3 @@ const Image = ({description, url}) => {
 };
 
 export default Image;
-
-
