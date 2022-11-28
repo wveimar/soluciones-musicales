@@ -1,0 +1,25 @@
+.bodyGrid {
+    display: grid;
+    width: 100%;
+    grid-template-areas:"headChirimias headChirimias headChirimias headChirimias"
+    "spacesContainer imagesContainer imagesContainer spacesContainer"
+    "spacesContainer videosContainer videosContainer spacesContainer";
+    grid-template-rows:1fr 1fr 1fr;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    
+    grid-gap: 20px;
+    
+  }
+   .headChirimias{
+  grid-area:headChirimias;
+  }
+   /* .imagesContainer{
+    grid-area:imagesContainer;
+  }
+   .videosContainer{
+    grid-area:videosContainer;
+  }
+   .spacesContainer{
+    grid-area:spacesContainer;
+  } */
+  

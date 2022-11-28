@@ -20,7 +20,6 @@ const PageSection = ({ sectionCode, code, children }) => {
   return (
     <section
       style={{ textAlign: "center", marginTop: "4rem" }}
-      className="section-container"
     >
       {pageSection && pageSection.hideTitle && (
         <h1 style={{ textAlign: "center" }}>{pageSection.title}</h1>

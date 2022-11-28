@@ -17,7 +17,6 @@ const Gallery = ({ code }) => {
   if (!data) {
     return <p>No Data!</p>;
   }
-console.log(data);
   const [gallery] = data.galleryCollection.items;
   const images = gallery?.imagesCollection.items;
   return (
