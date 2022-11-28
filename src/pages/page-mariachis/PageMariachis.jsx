@@ -6,7 +6,7 @@ import Gallery from "../../components/gallery/Gallery";
 import GridMedia from "../../components/grid-media/GridMedia";
 
 const PageMariachis = ({ pageCode }) => {
-  const { error, data } = useQuery(PAGE_CABILDO_CAPIUL_QUERY, {
+  const { error, data } = useQuery(PAGE_MARIACHIS_QUERY, {
     variables: {
       where: { code_contains: pageCode },
     },
@@ -37,7 +37,7 @@ const PageMariachis = ({ pageCode }) => {
 
 export default PageMariachis;
 
-const PAGE_CABILDO_CAPIUL_QUERY = gql`
+const PAGE_MARIACHIS_QUERY = gql`
   query simplePageCollection($where: SimplePageFilter) {
     simplePageCollection(where: $where) {
       items {
