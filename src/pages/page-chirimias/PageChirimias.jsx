@@ -21,7 +21,6 @@ const PageChirimias = ({ pageCode }) => {
 
   const [image] = data.simplePageCollection.items;
 
-  console.log(image);
   return (
     <div style={{ margin: "40px" }}>
       <Image description={image.description} url={image.image.url} />
