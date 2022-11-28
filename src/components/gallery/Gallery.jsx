@@ -4,6 +4,7 @@ import CardGallery from "../card-gallery/CardGallery";
 import "./gallery.module.css";
 
 const Gallery = ({ code }) => {
+  console.log(code);
   const { error, data } = useQuery(GALLERY_QUERY, {
     variables: {
       where: { code_contains: code },
@@ -16,12 +17,12 @@ const Gallery = ({ code }) => {
   if (!data) {
     return <p>No Data!</p>;
   }
-
+console.log(data);
   const [gallery] = data.galleryCollection.items;
-  const images = gallery.imagesCollection.items;
+  const images = gallery?.imagesCollection.items;
   return (
     <div className="gallery-card-container">
-      {images.map((itemImage, index) => (
+      {images?.map((itemImage, index) => (
         <CardGallery key={index} infoImage={itemImage} />
       ))}
     </div>
@@ -29,6 +30,7 @@ const Gallery = ({ code }) => {
 };
 
 export default Gallery;
+
 
 const GALLERY_QUERY = gql`
   query galleryCollection($where: GalleryFilter) {

@@ -29,7 +29,7 @@ const PageChirimias = ({ pageCode }) => {
       <Gallery code={`gallery-${pageCode}`} />
       </PageSection>
       <PageSection sectionCode="s2" code={pageCode}>
-      videos
+      <Gallery code={`gallery-${pageCode}`} />
       </PageSection>
     </div>
   );
