@@ -20,7 +20,7 @@ const PageChirimias = ({ pageCode }) => {
   }
   const [image] = data.simplePageCollection.items;
   return (
-    <div>
+    <div className="div">
       <Image description={image.description} url={image.image.url} />
       <PageSection sectionCode="s1" code={pageCode} >
         <Gallery code={`gallery-${pageCode}`} />
