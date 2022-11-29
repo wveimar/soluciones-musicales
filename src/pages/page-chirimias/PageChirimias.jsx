@@ -12,18 +12,15 @@ const PageChirimias = ({ pageCode }) => {
       where: { code_contains: pageCode },
     },
   });
-
   if (error && error.networkError) {
     return <p>Error: {error.networkError.result.errors[0].message}</p>;
   }
   if (!data) {
     return <p>No Data!</p>;
   }
-
   const [image] = data.simplePageCollection.items;
-
   return (
-    <div >
+    <div>
       <Image description={image.description} url={image.image.url} />
       <PageSection sectionCode="s1" code={pageCode} >
         <Gallery code={`gallery-${pageCode}`} />

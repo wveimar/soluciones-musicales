@@ -1,26 +1,24 @@
-.bodyGrid {
-    display: grid;
-    width: 100%;
-    grid-template-areas:"headChirimias headChirimias headChirimias headChirimias"
-    "spacesContainer imagesContainer imagesContainer spacesContainer"
-    "spacesContainer videosContainer videosContainer spacesContainer";
-  
-    grid-template-rows:1fr 1fr 1fr;
-    grid-template-columns:1fr 1fr 1fr 1fr;
-    
-    grid-gap: 20px;
-    
+div {
+  background: #abbaab; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffffff55, #abbaab76),
+    url("chirimia5.jpg"); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffffff72, #abbaab74),
+    url("chirimia5.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin: 0;
+  padding: 0;
+  background-size: 500%;
+  animation: fanimado 10s infinite;
+  clip-path: polygon(1% 0, 99% 1%, 99% 99%, 2% 99%);
+}
+
+@keyframes fanimado {
+  0% {
+    background-position: 0% 50%;
   }
-   .headChirimias{
-  grid-area:headChirimias;
+  50% {
+    background-position: 100% 50%;
   }
-   .imagesContainer{
-    grid-area:imagesContainer;
+  100% {
+    background-position: 0% 50%;
   }
-   .videosContainer{
-    grid-area:videosContainer;
-  }
-   .spacesContainer{
-    grid-area:spacesContainer;
-  }
-  
+}

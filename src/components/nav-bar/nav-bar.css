@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
+    background-color: rgba(33, 31, 31, 0.952);
     width: 100%;
     z-index: 100;
 }
@@ -22,6 +22,7 @@
 }
 
 .Navbar > .nav-items > .nav-link {
+    color: aliceblue;
     font-size: 16px;
     text-decoration: none;
     margin: 20px;
