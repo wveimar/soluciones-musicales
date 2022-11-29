@@ -24,16 +24,13 @@ const PageChirimias = ({ pageCode }) => {
 
   return (
     <div >
-      <Image description={image.description} url={image.image.url}/>
+      <Image description={image.description} url={image.image.url} />
       <PageSection sectionCode="s1" code={pageCode} >
         <Gallery code={`gallery-${pageCode}`} />
       </PageSection>
-      
-
-      <PageSection sectionCode="s2" code={pageCode} >
+     <PageSection sectionCode="s2" code={pageCode} >
         <GridMedia code={`${pageCode}-s2-vg`} />
       </PageSection>
-      
     </div>
   );
 };

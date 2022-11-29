@@ -15,8 +15,8 @@ const CardGallery = ({ infoImage }) => {
               <img
                 src={infoImage.url}
                 alt={infoImage.title}
-                height="300"
-                width="300"
+                height="100%"
+                width="100%"
               />
             </div>
           </article>

@@ -1,5 +1,6 @@
 import React from "react";
 import { useQuery, gql } from "@apollo/client";
+import "./page-section.css";
 
 const PageSection = ({ sectionCode, code, children }) => {
   const { error, data } = useQuery(PAGE_SECTION_QUERY, {
@@ -14,18 +15,14 @@ const PageSection = ({ sectionCode, code, children }) => {
   if (!data) {
     return <p>No Data!</p>;
   }
-
   const [pageSection] = data.pageSectionCollection.items;
-
   return (
-    <section
-      style={{ textAlign: "center", marginTop: "4rem" }}
-    >
+    <section >
       {pageSection && pageSection.hideTitle && (
-        <h1 style={{ textAlign: "center" }}>{pageSection.title}</h1>
+        <h1>{pageSection.title}</h1>
       )}
       {pageSection && !pageSection.hideDescription && (
-        <p style={{ marginBottom: "4rem" }}>{pageSection.description}</p>
+        <p>{pageSection.description}</p>
       )}
       <div>{children}</div>
     </section>

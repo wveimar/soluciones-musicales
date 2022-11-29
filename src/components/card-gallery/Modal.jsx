@@ -5,7 +5,7 @@ import "./modal.css";
 const Modal = ({ isShowing, hide, infoImageIMG, infoDescription }) =>
   isShowing
     ? ReactDOM.createPortal(
-        <React.Fragment>
+        <>
           <div className="modal-overlay" />
           <div
             className="modal-wrapper"
@@ -30,7 +30,7 @@ const Modal = ({ isShowing, hide, infoImageIMG, infoDescription }) =>
               <p>{infoDescription}</p>
             </div>
           </div>
-        </React.Fragment>,
+        </>,
         document.body
       )
     : null;
