@@ -1,10 +1,14 @@
 section {
-  text-align: center;
+  text-align: justify;
   margin-top: 4rem;
   padding: 0 16rem 0 16rem;
 }
+h1 {
+  text-align: center;
+}
 p {
-    margin-bottom: 4rem; 
+    margin-bottom: 4rem;
+    padding:0 8rem 0 8rem;
 }
 @media screen and (max-width: 1500px) {
   section{
@@ -25,5 +29,9 @@ p {
   section{
     margin-top: 2rem;
     padding: 0 1rem 0 1rem;
+  }
+  p {
+    margin: 0.5rem 0 0.5rem 0;
+    padding:0 1rem 0 1rem;
   }
 }

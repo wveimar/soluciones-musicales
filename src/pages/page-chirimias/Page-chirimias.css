@@ -7,7 +7,7 @@
   margin: 0;
   padding: 0;
   background-size: 500%;
-  animation: fanimado 10s infinite;
+  /* animation: fanimado 15s infinite; */
   /* clip-path: polygon(1% 0, 99% 1%, 99% 99%, 2% 99%); */
 }
 
